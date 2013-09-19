@@ -12,6 +12,11 @@ def index():
     return render_template('index.html')
 
 
+@app.route("/googlebf1f97b9e025c5e9.html")
+def google_verify_html():
+    return render_template('googlebf1f97b9e025c5e9.html')
+
+
 @app.route("/weather/<location>")
 def weather(location):
     lat, lng = location.split(",")
