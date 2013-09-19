@@ -3,7 +3,7 @@ body {
     color: #222222;
 }
 
-#message {
+.message {
     text-align: center;
     text-shadow: 1px 1px 1px #ffffff;
 }
