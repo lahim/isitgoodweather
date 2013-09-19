@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block head %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='js/fb.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/isitgoodweather.js') }}"></script>
+{% endblock %}
+{% block content %}
+    <div id="message" class={{ css_class if css_class else '' }}>
+        <h1>{{ weather_message }}</h1>
+    </div>
+
+    <div id="fb-root">
+        <div class="fb-like" data-href="http://isitgoodweather.com" data-width="450" data-show-faces="false"
+             data-send="false"></div>
+    </div>
+{% endblock %}

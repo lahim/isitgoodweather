@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='js/errors.js') }}"></script>
+{% endblock %}
+{% block content %}
+    <div id="message">
+        <h1>Ups! Something were wrong :-(</h1>
+    </div>
+{% endblock %}

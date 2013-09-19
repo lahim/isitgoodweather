@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    {% block head %}
+        <meta charset="utf-8">
+        <title>Is it good weather?{% block title %}{% endblock %}</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" media="screen"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-theme.min.css') }}" media="screen"/>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" media="screen"/>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/jquery.cookie.js') }}"></script>
+
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <meta property="og:image" content="http://isitgoodweather.com/static/img/fb-weather.png"/>
+    {% endblock %}
+</head>
+<body>
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>

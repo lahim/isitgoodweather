@@ -33,3 +33,12 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+.idea/
+*.pyc
+*.log
+*.iml
+.DS_Store
+._.DS_Store
+
+config/

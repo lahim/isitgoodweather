@@ -1,0 +1,21 @@
+body {
+    background-color: #d1d1d1;
+    color: #222222;
+}
+
+#message {
+    text-align: center;
+    text-shadow: 1px 1px 1px #ffffff;
+}
+
+.warning-message {
+    color: #940900;
+}
+
+#fb-root {
+    position: absolute;
+    height: 40px;
+    padding: 0px;
+    bottom: 5px;
+    left: 25px;
+}
