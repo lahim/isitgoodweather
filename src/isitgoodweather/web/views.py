@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
+import logging
 from flask import render_template
 from flask.json import jsonify
 from isitgoodweather import app
 from web.weather import get_weather_message
 
 __author__ = 'lahim'
+
+logger = logging.getLogger('root')
 
 
 @app.route("/")
@@ -22,6 +25,8 @@ def weather(location):
     lat, lng = location.split(",")
 
     attempt_number, weather_message, weather, code, css_class = get_weather_message(lat, lng)
+
+    logger.info('Location: [%s, %s], weather code: [%s], weather message: %s', lat, lng, code, weather.lower())
 
     return jsonify(attempt_number=attempt_number, weather_message=weather_message, weather=weather, weather_code=code,
                    css_class=css_class)
