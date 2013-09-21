@@ -36,9 +36,6 @@ def get_weather(woeid):
     weather = weather_condition['text']
     code = weather_condition['code']
 
-    print 'weather: ', weather
-    print 'code: ', code
-
     return weather, int(code)
 
 

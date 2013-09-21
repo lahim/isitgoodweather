@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import logging
 import urllib
 from flask import request
 import settings
@@ -8,6 +9,8 @@ __author__ = 'lahim'
 
 attempts = settings.WEATHER_REQUEST_ATTEMPTS
 messages = settings.MESSAGES
+
+logger = logging.getLogger('root')
 
 
 def get_weather_message(lat, lng):
@@ -51,16 +54,19 @@ def _get_messages(attempt_number, weather, code):
     """
 
     weather = str(weather).lower()
+    code = int(code)
 
     if code in [31, 32, 33, 34, 36]:
-        result = 'Yes'
+        answer = 'Yes'
     elif code in [20, 29, 30, 44]:
-        result = 'So-so'
+        answer = 'So-so'
     else:
-        result = "No"
+        answer = "No"
+
+    logger.debug('Weather code: %s, answer: %s', code, answer)
 
     if attempt_number in [1, 2]:
-        return messages[attempt_number - 1] % (result, weather)
+        return messages[attempt_number - 1] % (answer, weather)
     elif attempt_number is 3:
         return messages[attempt_number - 1] % weather
     else:

@@ -10,7 +10,7 @@ __author__ = 'lahim'
 app = Flask(__name__)
 
 logging.config.dictConfig(settings.LOGGING)
-logger = logging.getLogger('console')
+logger = logging.getLogger('root')
 
 from web.views import *
 
