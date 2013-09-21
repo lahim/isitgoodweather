@@ -51,7 +51,13 @@ def _get_messages(attempt_number, weather, code):
     """
 
     weather = str(weather).lower()
-    result = 'Yes' if code in [31, 32, 33, 34, 36] else 'No'
+
+    if code in [31, 32, 33, 34, 36]:
+        result = 'Yes'
+    elif code in [20, 29, 30, 44]:
+        result = 'So-so'
+    else:
+        result = "No"
 
     if attempt_number in [1, 2]:
         return messages[attempt_number - 1] % (result, weather)
