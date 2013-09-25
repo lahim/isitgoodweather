@@ -14,6 +14,12 @@ get_weather_client = GetWeatherClient()
 
 
 def get_weather(lat, lng):
+    """
+    Gets weather deserialized object based on location (longitude, latitude).
+    @param lat: long
+    @param lng: long
+    @return: weather object
+    """
     place = find_place_client.find_place(lat, lng)
 
     if not place:
