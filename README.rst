@@ -4,7 +4,7 @@ Is it good weather?
 .. contents::
 ..
 
-.. https://travis-ci.org/lahim/isitgoodweather.png
+.. image:: https://travis-ci.org/lahim/isitgoodweather.png
    :target: https://travis-ci.org/lahim/isitgoodweather.png
 
 OpenSource project where you can check weather, is good or not.
@@ -18,7 +18,10 @@ Requirements
 * MarkupSafe 0.18
 * Werkzeug 0.9.4
 * gunicorn 18.0
+* itsdangerous 0.23
+* nose 1.3.0
 * requests 1.2.3
+* wsgiref 0.1.2
 
 Installation anr run
 --------------------

@@ -32,10 +32,25 @@ $(window).resize(function () {
 });
 
 function setStyle() {
+    var div_message = $('div.message');
+    var width = $(document).width();
     var height = $(document).height();
-    var paddingTop = (height / 2) - 50;
+    var top = (height / 2) - 50;
 
-    $('div.message').css('padding-top', paddingTop);
+    $(div_message).css('top', top);
+    $(div_message).css('width', width);
+    $(div_message).css('left', 0);
+}
+
+function setMessage(message) {
+    var weather_message = $('#weather_message');
+    var width = $(document).width();
+    var left = (width / 2);
+
+    $(weather_message).html(message);
+    left -= ($(weather_message).width() / 2);
+
+    $(weather_message).css('left', left);
 }
 
 function getLocationWithWeather() {
@@ -60,8 +75,8 @@ function get_weather_message(position) {
             var css_class = data.css_class;
 
             $("#weather_message").find("div[class=spinner]").hide();
+            setMessage(funny_message);
 
-            $('#weather_message').html(funny_message);
             if (css_class) {
                 $('div.message').addClass(css_class);
             }

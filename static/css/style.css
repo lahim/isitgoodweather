@@ -1,11 +1,13 @@
 body {
-    background-color: #d1d1d1;
+    background-color: #e4e4e4;
     color: #222222;
 }
 
 .message {
+    position: absolute;
     text-align: center;
-    text-shadow: 1px 1px 1px #ffffff;
+    text-shadow: 1px 1px 1px #eeeeee;
+    padding: 10px 0 30px 0;
 }
 
 .warning-message {
