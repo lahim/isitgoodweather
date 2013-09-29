@@ -7,7 +7,8 @@ Is it good weather?
 .. image:: https://travis-ci.org/lahim/isitgoodweather.png
    :target: https://travis-ci.org/lahim/isitgoodweather.png
 
-OpenSource project where you can check weather, is good or not.
+Open source project where you can check current weather, is it good or not weather. Application is using
+Yahoo Weather API (http://developer.yahoo.com/weather).
 
 
 Requirements
@@ -23,8 +24,8 @@ Requirements
 * requests 1.2.3
 * wsgiref 0.1.2
 
-Installation anr run
---------------------
+Installation & Run
+------------------
 
 Requirements installation:
 ``pip install -r requirements.txt``
